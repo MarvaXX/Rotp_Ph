@@ -1,0 +1,22 @@
+here it gets very painful.
+
+After converting the models to modded entity on blockbench, you must export them as java entities over here. Then, you must change inside their code A LOT of stuff. 
+If you miss something AT ALL, it might already do some funky visual stuff with your model.
+
+HONESTLY, just check the github and see what Stando used on his own code, and if you are just making a sort of "clone", like I am, just use what his code uses, but changing the necesary paths.
+
+To start off, make sure the class extends HumanoidStandModel and then call forth the entity you created in entity/stand/stands. (there is multiple lines calling the entity, be sure to check every usage)
+
+In SP case, his hair moves a lot, so there is a declaration to have his hair moving, *a freaking lot*.
+
+Later, there is a declaration of where the model appears and the rotation of body parts and etc. "Why must we do this ?" Because using HumanoidStandModel requires it, so it knows how to move around and barrage.
+
+and now there is animations for the hair and moving, really, just copy paste this if you have no idea what to do.
+
+afterwards, there is the summoning pose, cause if you didn't notice, Stands Pose when you summon them. This is mostly a really hit or miss if you wanna make your own poses, but Blockbench could help you find out what numbers to use.
+
+then again, there is more animations, this one for the punches, since there is a combo mechanic, and with that, the heavy combo attack.
+
+
+
+This is probably the most headache part if you mess something up.

@@ -1,0 +1,15 @@
+Here we set the Java Classes of the skill of the stand, and what they do.
+
+I left in my Knife Barrage as a example, so we can see how to register and add it to a Stand.
+
+DO NOT ask me how to make new skills if you have 0 idea how to, ask in the code questions chat or wait for stando to come back IF it is a reasonable and posible idea, coding is rather painful.
+
+TLDR of the Knife Barrage:
+
+the class (of the same name) extends the stand entity action. Then I call the builder to register what it does.
+
+I set with a integer the number of knives that will be thrown
+
+I call the action to what the stand does, and use a "for" to make the same action repeat itself, until the number of knives reach 0.
+
+Magician's Red Fireball was used as a example for how this ability works

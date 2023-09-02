@@ -1,0 +1,14 @@
+{
+  "stand_purplehaze_stand": {
+    "subtitle": "rotp_ph.subtitle.purplehaze_stand_name",
+    "sounds": [ "rotp_ph:stand_user/stand_purplehaze_stand"]
+  },
+  "purplehaze_stand_ugh": {
+    "subtitle": "jojo.subtitle.ugh",
+    "sounds": [ "rotp_ph:stand/purplehaze_stand_ugh" ]
+  },
+  "purplehaze_stand_ushua": {
+    "subtitle": "jojo.subtitle.ushua",
+    "sounds": [ "rotp_ph:stand/purplehaze_stand_ushua"]
+  },
+}

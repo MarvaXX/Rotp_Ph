@@ -1,0 +1,1 @@
+Here you can make your own potion effects, "how to ?" that is basically up to you really, just check the original code in github if you need to

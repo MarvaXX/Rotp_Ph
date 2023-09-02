@@ -1,0 +1,6 @@
+lang files is what the sounds text is.
+without it, some sounds will just show their id or location, so we put a name to differentiate it.
+
+there is regular names, like Skill Names, for when they appear in the HUD, together with the Stand Name. While there is also a description to when you activate subtitles in the minecraft options.
+
+Mostly, use other the already done langs as a reference to how you should do it.

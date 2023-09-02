@@ -1,0 +1,5 @@
+Projectiles is for the texture of projectiles, like Emerald Splash
+
+Stand is for Stand Model Textures
+
+reminder that they should be png

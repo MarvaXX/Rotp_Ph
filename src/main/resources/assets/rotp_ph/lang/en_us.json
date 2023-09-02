@@ -1,0 +1,10 @@
+{
+  "entity.rotp_ph.purplehaze_stand": "Purple Haze",
+  "stand.rotp_ph.purplehaze_stand": "Purple Haze",
+  "action.rotp_ph.purplehaze_stand_punch": "Punch",
+  "action.rotp_ph.purplehaze_stand_heavy_punch": "Heavy Punch",
+  "action.rotp_ph.purplehaze_stand_combo_punch": "Heavy Punch",
+  "action.rotp_ph.purplehaze_stand_barrage": "Barrage",
+  "action.rotp_ph.purplehaze_stand_block": "Block",
+  "rotp_ph.subtitle.purplehaze_stand_name": "\"Purple Haze\""
+}
