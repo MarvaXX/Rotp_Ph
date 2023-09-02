@@ -79,6 +79,7 @@ public class InitStands {
 
                             new StandType.StandTypeOptionals()
                             .addSummonShout(InitSounds.USER_PURPLEHAZE_STAND)
+                            .addSummonShout(InitSounds.PURPLEHAZE_STAND_UGH)
                             .addOst(InitSounds.PURPLEHAZE_STAND_OST)), 
 
                     InitEntities.ENTITIES, 

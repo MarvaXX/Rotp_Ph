@@ -12,6 +12,6 @@ import net.minecraft.util.ResourceLocation;
 public class PurpleHaze_Renderer extends StandEntityRenderer<PurpleHaze_Entity, PurpleHazeModel> {
     
     public PurpleHaze_Renderer(EntityRendererManager renderManager) {
-        super(renderManager, new PurpleHazeModel(), new ResourceLocation(RotpPhAddon.MOD_ID, "textures/entity/stand/PurpleHaze.png"), 0);
+        super(renderManager, new PurpleHazeModel(), new ResourceLocation(RotpPhAddon.MOD_ID, "textures/entity/stand/purplehaze.png"), 0);
     }
 }

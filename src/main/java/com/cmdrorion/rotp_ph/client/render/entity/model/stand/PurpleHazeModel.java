@@ -1,9 +1,21 @@
+package com.cmdrorion.rotp_ph.client.render.entity.model.stand;
+
+import com.cmdrorion.rotp_ph.entity.stand.stands.PurpleHaze_Entity;
+import com.github.standobyte.jojo.action.stand.StandEntityAction;
+import com.github.standobyte.jojo.client.render.entity.model.stand.HumanoidStandModel;
+import com.github.standobyte.jojo.client.render.entity.pose.ModelPose;
+import com.github.standobyte.jojo.client.render.entity.pose.RotationAngle;
+import com.github.standobyte.jojo.client.render.entity.pose.anim.PosedActionAnimation;
+import com.github.standobyte.jojo.entity.stand.StandPose;
+
+import net.minecraft.client.renderer.model.ModelRenderer;
+
 // Made with Blockbench 4.8.3
 // Exported for Minecraft version 1.15 - 1.16 with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
 
-public class Purple Haze extends EntityModel<Entity> {
+public class PurpleHazeModel extends HumanoidStandModel<PurpleHaze_Entity> {
 	private final ModelRenderer head;
 	private final ModelRenderer Hat;
 	private final ModelRenderer body;
@@ -20,9 +32,12 @@ public class Purple Haze extends EntityModel<Entity> {
 	private final ModelRenderer leftLowerLeg;
 	private final ModelRenderer rightLowerLeg;
 
-	public Purple Haze() {
-		texWidth = 124;
-		texHeight = 124;
+	public PurpleHazeModel() {
+		super();
+		
+		addHumanoidBaseBoxes(null);
+		texWidth = 128;
+		texHeight = 128;
 
 		head = new ModelRenderer(this);
 		head.setPos(0.0F, 0.0F, 0.0F);
@@ -147,28 +162,77 @@ public class Purple Haze extends EntityModel<Entity> {
 		rightLowerLeg.texOffs(0, 22).addBox(-3.9F, -6.0F, -2.0F, 4.0F, 6.0F, 4.0F, 0.0F, false);
 	}
 
-	@Override
-	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
-		//previously the render function, render code was moved to a method below
+@Override
+	protected RotationAngle[][] initSummonPoseRotations() {
+		return new RotationAngle[][] {
+				new RotationAngle[] {
+						RotationAngle.fromDegrees(head, 0, -15F, 0),
+						RotationAngle.fromDegrees(body, -10F, -10F, 0),
+						RotationAngle.fromDegrees(upperPart, 0, 0, 0),
+						RotationAngle.fromDegrees(leftArm, 10F, 0, -2.5F),
+						RotationAngle.fromDegrees(leftForeArm, -15F, 0, 2.5F),
+						RotationAngle.fromDegrees(rightArm, 10F, 0, 2.5F),
+						RotationAngle.fromDegrees(rightForeArm, -2.5F, 0, 2.5F),
+						RotationAngle.fromDegrees(leftLeg, 7.5F, 0, -5F),
+						RotationAngle.fromDegrees(leftLowerLeg, 2.5F, 0, 5F),
+						RotationAngle.fromDegrees(rightLeg, 5F, 0, 5F),
+						RotationAngle.fromDegrees(rightLowerLeg, 2.5F, 0, -5)
+				},
+				new RotationAngle[] {
+						RotationAngle.fromDegrees(head, 0, 0, 0),
+						RotationAngle.fromDegrees(body, 5F, -20F, 0),
+						RotationAngle.fromDegrees(upperPart, 0, 0, 0),
+						RotationAngle.fromDegrees(leftArm, 0, 0, 0),
+						RotationAngle.fromDegrees(leftForeArm, -7.5F, 0, 0),
+						RotationAngle.fromDegrees(rightArm, 0, -50F, 20F),
+						RotationAngle.fromDegrees(rightForeArm, -40F, 0, 0),
+						RotationAngle.fromDegrees(leftLeg, -15F, -15F, 0),
+						RotationAngle.fromDegrees(leftLowerLeg, 10F, 0, 0),
+						RotationAngle.fromDegrees(rightLeg, -7.5F, 15F, 0),
+						RotationAngle.fromDegrees(rightLowerLeg, 2.5F, 0, 0)
+				}
+		};
 	}
 
 	@Override
-	public void renderToBuffer(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-		head.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		body.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightArm.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftArm.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightLeg.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftleg.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightForeArm.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftForeArm.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		leftLowerLeg.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-		rightLowerLeg.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+	protected void initActionPoses() {
+        actionAnim.put(StandPose.RANGED_ATTACK, new PosedActionAnimation.Builder<PurpleHaze_Entity>()
+                .addPose(StandEntityAction.Phase.BUTTON_HOLD, new ModelPose<>(new RotationAngle[] {
+                        new RotationAngle(body, 0.0F, -0.48F, 0.0F),
+                        new RotationAngle(leftArm, 0.0F, 0.0F, 0.0F),
+                        new RotationAngle(leftForeArm, 0.0F, 0.0F, 0.0F),
+                        new RotationAngle(rightArm, -1.0908F, 0.0F, 1.5708F), 
+                        new RotationAngle(rightForeArm, 0.0F, 0.0F, 0.0F)
+                }))
+                .build(idlePose));
+
+		super.initActionPoses();
 	}
 
-	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
-		modelRenderer.xRot = x;
-		modelRenderer.yRot = y;
-		modelRenderer.zRot = z;
+	@Override
+	protected ModelPose<PurpleHaze_Entity> initIdlePose() {
+		return new ModelPose<>(new RotationAngle[] {
+				RotationAngle.fromDegrees(body, -5F, 30F, 0.0F),
+				RotationAngle.fromDegrees(upperPart, 0.0F, 0.0F, 0.0F),
+				RotationAngle.fromDegrees(torso, 0.0F, 0.0F, 0.0F),
+				RotationAngle.fromDegrees(leftArm, 12.5F, -30F, -15F),
+				RotationAngle.fromDegrees(leftForeArm, -12.5F, 0.0F, 0.0F),
+				RotationAngle.fromDegrees(rightArm, 10F, 30F, 15F),
+				RotationAngle.fromDegrees(rightForeArm, -15F, 0.0F, 0.0F),
+				RotationAngle.fromDegrees(leftLeg, 20F, 0.0F, 0.0F),
+				RotationAngle.fromDegrees(leftLowerLeg, 0.0F, 0.0F, 0.0F),
+				RotationAngle.fromDegrees(rightLeg, 0.0F, 0.0F, 0.0F),
+				RotationAngle.fromDegrees(rightLowerLeg, 5F, 0.0F, 0.0F)
+		});
+	}
+
+	@Override
+	protected ModelPose<PurpleHaze_Entity> initIdlePose2Loop() {
+		return new ModelPose<>(new RotationAngle[] {
+				RotationAngle.fromDegrees(leftArm, 7.5F, -30F, -15F),
+				RotationAngle.fromDegrees(leftForeArm, -17.5F, 0.0F, 0.0F),
+				RotationAngle.fromDegrees(rightArm, 12.5F, 30F, 15F),
+				RotationAngle.fromDegrees(rightForeArm, -17.5F, 0.0F, 0.0F)
+		});
 	}
 }
