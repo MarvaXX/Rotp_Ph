@@ -16,31 +16,14 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 
 
 public class PurpleHazeModel extends HumanoidStandModel<PurpleHaze_Entity> {
-	private final ModelRenderer head;
-	private final ModelRenderer Hat;
-	private final ModelRenderer body;
-	private final ModelRenderer upperPart;
-	private final ModelRenderer torso;
-	private final ModelRenderer leftShoulder;
-	private final ModelRenderer torso_r1;
-	private final ModelRenderer rightShoulder;
-	private final ModelRenderer torso_r2;
-	private final ModelRenderer leftArm;
-	private final ModelRenderer cube_r1;
-	private final ModelRenderer leftArmJoint;
-	private final ModelRenderer leftForeArm;
-	private final ModelRenderer rightArm;
-	private final ModelRenderer cube_r2;
-	private final ModelRenderer cube_r3;
-	private final ModelRenderer rightArmJoint;
-	private final ModelRenderer rightForeArm;
-	private final ModelRenderer leftLeg;
-	private final ModelRenderer cube_r4;
-	private final ModelRenderer leftLegJoint;
-	private final ModelRenderer leftLowerLeg;
-	private final ModelRenderer rightLeg;
-	private final ModelRenderer rightLegJoint;
-	private final ModelRenderer rightLowerLeg;
+    private final ModelRenderer Hat;
+    private final ModelRenderer torso;
+    private final ModelRenderer torso_r1;
+    private final ModelRenderer torso_r2;
+    private final ModelRenderer cube_r1;
+    private final ModelRenderer cube_r2;
+    private final ModelRenderer cube_r3;
+    private final ModelRenderer cube_r4;
 
 	public PurpleHazeModel() {
 		super();
@@ -50,70 +33,92 @@ public class PurpleHazeModel extends HumanoidStandModel<PurpleHaze_Entity> {
 		texHeight = 128;
 
 
-
 		Hat = new ModelRenderer(this);
-		Hat.setPos(0.0F, 0.0F, 0.0F);
-		Hat.texOffs(92, 89).addBox(-1.1F, -8.9F, -4.9F, 2.2F, 5.9F, 8.9F, 0.0F, false);
-		Hat.texOffs(92, 89).addBox(-2.2F, -8.9F, -4.9F, 1.2F, 4.9F, 8.9F, 0.0F, false);
-		Hat.texOffs(92, 89).addBox(-4.2F, -8.1F, -4.9F, 3.2F, 3.1F, 8.9F, 0.0F, false);
-		Hat.texOffs(92, 89).addBox(1.8F, -8.1F, -4.9F, 3.2F, 3.1F, 8.9F, 0.0F, false);
-		Hat.texOffs(92, 89).addBox(1.0F, -8.9F, -4.9F, 1.4F, 4.9F, 8.9F, 0.0F, false);
-		Hat.texOffs(79, 85).addBox(-4.4F, -8.5F, -4.9F, 9.4F, 0.5F, 8.9F, 0.0F, false);
-		Hat.texOffs(79, 85).addBox(-3.4F, -8.7F, -4.9F, 7.4F, 0.7F, 8.9F, 0.0F, false);
-		Hat.texOffs(91, 88).addBox(4.6F, -8.5F, -4.9F, 0.4F, 3.5F, 9.1F, 0.0F, false);
-		Hat.texOffs(98, 95).addBox(2.6F, -8.5F, 2.1F, 2.4F, 6.6F, 2.2F, 0.0F, false);
-		Hat.texOffs(99, 96).addBox(2.6F, -2.5F, 3.1F, 2.4F, 1.3F, 1.2F, 0.0F, false);
-		Hat.texOffs(91, 88).addBox(-4.8F, -8.5F, -4.9F, 0.8F, 3.5F, 9.4F, 0.0F, false);
-		Hat.texOffs(98, 95).addBox(-4.8F, -5.5F, 2.0F, 1.8F, 3.5F, 2.5F, 0.0F, false);
-		Hat.texOffs(99, 96).addBox(-4.8F, -2.5F, 3.0F, 1.8F, 1.5F, 1.5F, 0.0F, false);
-		Hat.texOffs(98, 95).addBox(-4.4F, -8.5F, 2.1F, 0.4F, 3.5F, 2.4F, 0.0F, false);
-		Hat.texOffs(87, 93).addBox(-4.1F, -8.5F, 4.1F, 8.0F, 8.3F, 0.7F, 0.0F, false);
-		Hat.texOffs(87, 93).addBox(-4.1F, -8.5F, 4.1F, 8.9F, 7.8F, 0.7F, 0.0F, false);
-		Hat.texOffs(31, 102).addBox(-2.0F, -10.8F, -1.5F, 4.0F, 2.2F, 5.5F, 0.0F, false);
-		Hat.texOffs(31, 102).addBox(-1.4F, -12.1F, -2.8F, 2.9F, 1.6F, 5.2F, 0.0F, false);
-		Hat.texOffs(31, 102).addBox(-1.0F, -13.1F, -4.8F, 2.0F, 1.2F, 5.2F, 0.0F, false);
-		Hat.texOffs(0, 0).addBox(-5.0F, -5.0F, -1.0F, 1.0F, 4.0F, 2.0F, 0.0F, false);
-		Hat.texOffs(1, 1).addBox(-5.0F, -4.0F, 1.0F, 1.0F, 2.0F, 1.0F, 0.0F, false);
-		Hat.texOffs(1, 1).addBox(-5.0F, -4.0F, -2.0F, 1.0F, 2.0F, 1.0F, 0.0F, false);
-		Hat.texOffs(1, 1).addBox(4.0F, -4.0F, 1.0F, 1.0F, 2.0F, 1.0F, 0.0F, false);
-		Hat.texOffs(0, 0).addBox(4.0F, -5.0F, -1.0F, 1.0F, 4.0F, 2.0F, 0.0F, false);
-		Hat.texOffs(1, 1).addBox(4.0F, -4.0F, -2.0F, 1.0F, 2.0F, 1.0F, 0.0F, false);
-		Hat.texOffs(0, 0).addBox(-5.0F, -5.0F, -1.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
-		Hat.texOffs(0, 0).addBox(-5.0F, -2.0F, -1.0F, 1.0F, 1.0F, 2.0F, 0.0F, false);
+		Hat.setPos(-0.1F, 0.0F, 0.0F);
+		head.addChild(Hat);
+		Hat.texOffs(57, 5).addBox(-1.1F, -8.9F, -4.9F, 2.2F, 5.9F, 8.9F, 0.0F, false);
+		Hat.texOffs(9, 37).addBox(-4.1F, -6.9F, -4.5F, 8.2F, 4.9F, 0.1F, 0.0F, false);
+		Hat.texOffs(9, 37).addBox(-3.1F, -2.2F, -4.5F, 6.2F, 1.2F, 0.1F, 0.0F, false);
+		Hat.texOffs(9, 37).addBox(-1.1F, -1.2F, -4.5F, 2.2F, 1.2F, 0.1F, 0.0F, false);
+		Hat.texOffs(57, 5).addBox(-2.2F, -8.9F, -4.9F, 1.2F, 4.9F, 8.9F, 0.0F, false);
+		Hat.texOffs(57, 5).addBox(-4.2F, -8.1F, -4.9F, 3.2F, 3.1F, 8.9F, 0.0F, false);
+		Hat.texOffs(57, 5).addBox(1.8F, -8.1F, -4.9F, 3.2F, 3.1F, 8.9F, 0.0F, false);
+		Hat.texOffs(57, 5).addBox(1.0F, -8.9F, -4.9F, 1.4F, 4.9F, 8.9F, 0.0F, false);
+		Hat.texOffs(44, 1).addBox(-4.4F, -8.5F, -4.9F, 9.4F, 0.5F, 8.9F, 0.0F, false);
+		Hat.texOffs(44, 1).addBox(-3.4F, -8.7F, -4.9F, 7.4F, 0.7F, 8.9F, 0.0F, false);
+		Hat.texOffs(56, 4).addBox(4.6F, -8.5F, -4.9F, 0.4F, 3.5F, 9.1F, 0.0F, false);
+		Hat.texOffs(63, 11).addBox(2.6F, -8.5F, 2.1F, 2.4F, 6.6F, 2.2F, 0.0F, false);
+		Hat.texOffs(64, 12).addBox(2.6F, -2.5F, 3.1F, 2.4F, 1.3F, 1.2F, 0.0F, false);
+		Hat.texOffs(56, 4).addBox(-4.8F, -8.5F, -4.9F, 0.8F, 3.5F, 9.4F, 0.0F, false);
+		Hat.texOffs(63, 11).addBox(-4.8F, -5.5F, 2.0F, 1.8F, 3.5F, 2.5F, 0.0F, false);
+		Hat.texOffs(64, 12).addBox(-4.8F, -2.5F, 3.0F, 1.8F, 1.5F, 1.5F, 0.0F, false);
+		Hat.texOffs(63, 11).addBox(-4.4F, -8.5F, 2.1F, 0.4F, 3.5F, 2.4F, 0.0F, false);
+		Hat.texOffs(52, 9).addBox(-4.1F, -8.5F, 4.1F, 8.0F, 8.3F, 0.7F, 0.0F, false);
+		Hat.texOffs(52, 9).addBox(-4.1F, -8.5F, 4.1F, 8.9F, 7.8F, 0.7F, 0.0F, false);
+		Hat.texOffs(62, 0).addBox(-2.0F, -10.8F, -1.5F, 4.0F, 2.2F, 5.5F, 0.0F, false);
+		Hat.texOffs(62, 0).addBox(-1.4F, -12.1F, -2.8F, 2.9F, 1.6F, 5.2F, 0.0F, false);
+		Hat.texOffs(62, 0).addBox(-1.0F, -13.1F, -4.8F, 2.0F, 1.2F, 5.2F, 0.0F, false);
 
-		bodyParts = new ModelRenderer(this);
-		bodyParts.setPos(0.0F, 24.0F, 0.0F);
-		bodyParts.texOffs(91, 34).addBox(2.0F, -21.0F, 1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-		bodyParts.texOffs(89, 32).addBox(2.6F, -20.6F, 1.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
-		bodyParts.texOffs(89, 32).addBox(-0.4F, -20.6F, 1.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
-		bodyParts.texOffs(91, 34).addBox(-1.0F, -21.0F, 1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-		bodyParts.texOffs(89, 32).addBox(-3.4F, -20.6F, 1.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
-		bodyParts.texOffs(91, 34).addBox(-4.0F, -21.0F, 1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
 
+		torso = new ModelRenderer(this);
+		torso.setPos(0.0F, -12.0F, 0.0F);
+		upperPart.addChild(torso);
+		torso.texOffs(0, 64).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, 0.0F, false);
+		torso.texOffs(20, 64).addBox(-3.5F, 1.1F, -2.0F, 7.0F, 3.0F, 1.0F, 0.4F, false);
+		torso.texOffs(24, 73).addBox(-2.5F, 4.0F, -2.3F, 5.0F, 6.0F, 1.0F, 0.0F, false);
+		torso.texOffs(91, 34).addBox(2.0F, 3.0F, 1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+		torso.texOffs(89, 32).addBox(2.6F, 3.4F, 1.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
+		torso.texOffs(89, 32).addBox(-0.4F, 3.4F, 1.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
+		torso.texOffs(91, 34).addBox(-1.0F, 3.0F, 1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+		torso.texOffs(89, 32).addBox(-3.4F, 3.4F, 1.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
+		torso.texOffs(91, 34).addBox(-4.0F, 3.0F, 1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+		torso.texOffs(47, 81).addBox(-4.0F, 4.0F, 1.8F, 8.0F, 15.0F, 0.5F, 0.0F, false);
+		torso.texOffs(52, 10).addBox(-1.45F, 10.65F, -2.55F, 2.9F, 3.2F, 4.0F, 0.15F, true);
+
+		torso_r1 = new ModelRenderer(this);
+		torso_r1.setPos(-5.9F, 21.85F, 0.0F);
+		leftArm.addChild(torso_r1);
+		setRotationAngle(torso_r1, 0.0F, 0.0F, 0.0873F);
+		torso_r1.texOffs(23, 23).addBox(1.25F, -24.3F, -2.55F, 0.9F, 1.4F, 5.1F, 0.15F, true);
+		torso_r1.texOffs(23, 23).addBox(1.25F, -22.6F, -2.55F, 4.9F, 1.0F, 5.1F, 0.15F, true);
 
 		cube_r1 = new ModelRenderer(this);
-		cube_r1.setPos(3.1F, 10.0F, 0.0F);
-		cube_r1.texOffs(58, 83).addBox(-7.0F, -11.9F, -2.3F, 1.2F, 2.9F, 1.5F, 0.0F, false);
-		cube_r1.texOffs(59, 84).addBox(-10.0F, -10.2F, -2.3F, 4.2F, 1.2F, 0.5F, 0.0F, false);
-		cube_r1.texOffs(55, 80).addBox(-10.6F, -10.2F, -2.3F, 1.6F, 1.2F, 4.6F, 0.0F, false);
-		cube_r1.texOffs(59, 84).addBox(-10.3F, -10.2F, 1.7F, 4.3F, 1.2F, 0.6F, 0.0F, false);
-		cube_r1.texOffs(58, 83).addBox(-7.0F, -11.9F, 0.7F, 1.0F, 2.9F, 1.6F, 0.0F, false);
+		cube_r1.setPos(-6.0F, 22.0F, 0.0F);
+		leftArm.addChild(cube_r1);
+		setRotationAngle(cube_r1, 0.0F, 1.5708F, 0.0F);
+		cube_r1.texOffs(89, 32).addBox(-0.4F, -19.6F, 7.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
+		cube_r1.texOffs(91, 34).addBox(-1.0F, -20.0F, 7.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
 
+		torso_r2 = new ModelRenderer(this);
+		torso_r2.setPos(6.1F, 21.85F, 0.0F);
+		rightArm.addChild(torso_r2);
+		setRotationAngle(torso_r2, 3.1416F, 0.0F, 3.0543F);
+		torso_r2.texOffs(23, 23).addBox(1.65F, -24.3F, -2.55F, 0.9F, 1.4F, 5.1F, 0.15F, true);
+		torso_r2.texOffs(23, 23).addBox(1.65F, -22.6F, -2.55F, 4.9F, 1.0F, 5.1F, 0.15F, true);
 
+		cube_r2 = new ModelRenderer(this);
+		cube_r2.setPos(6.0F, 22.0F, 0.0F);
+		rightArm.addChild(cube_r2);
+		setRotationAngle(cube_r2, 0.0F, -1.5708F, 0.0F);
+		cube_r2.texOffs(91, 34).addBox(-1.0F, -20.0F, 7.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+		cube_r2.texOffs(89, 32).addBox(-0.4F, -19.6F, 7.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
 
-		foreArmPart2.setPos(-3.1F, -10.0F, 0.0F);
-		foreArmPart2.texOffs(37, 83).addBox(-4.0F, 8.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		foreArmPart2.texOffs(37, 83).addBox(-4.0F, 8.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		foreArmPart2.texOffs(36, 82).addBox(-4.0F, 8.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		foreArmPart2.texOffs(37, 83).addBox(-4.0F, 8.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		cube_r3 = new ModelRenderer(this);
+		cube_r3.setPos(-1.9F, 12.0F, 0.0F);
+		leftLeg.addChild(cube_r3);
+		setRotationAngle(cube_r3, 0.0F, 3.1416F, 0.0F);
+		cube_r3.texOffs(91, 34).addBox(-3.0F, -10.0F, 1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+		cube_r3.texOffs(89, 32).addBox(-2.4F, -9.6F, 1.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
 
-		foreArmPart = new ModelRenderer(this);
-		foreArmPart.setPos(-5.0F, -22.0F, 0.0F);
-		foreArmPart.texOffs(37, 83).addBox(13.0F, 8.0F, -2.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		foreArmPart.texOffs(37, 83).addBox(13.0F, 8.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		foreArmPart.texOffs(36, 82).addBox(13.0F, 8.0F, -1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
-		foreArmPart.texOffs(37, 83).addBox(13.0F, 8.0F, 1.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
+		cube_r4 = new ModelRenderer(this);
+		cube_r4.setPos(1.9F, 12.0F, 0.0F);
+		rightLeg.addChild(cube_r4);
+		setRotationAngle(cube_r4, 0.0F, 3.1416F, 0.0F);
+		cube_r4.texOffs(91, 34).addBox(1.0F, -10.0F, 1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+		cube_r4.texOffs(89, 32).addBox(1.6F, -9.6F, 1.0F, 1.0F, 1.1F, 4.0F, 0.0F, false);
+
 	}
+
 
 @Override
 	protected RotationAngle[][] initSummonPoseRotations() {
