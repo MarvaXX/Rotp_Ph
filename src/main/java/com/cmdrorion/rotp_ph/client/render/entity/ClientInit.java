@@ -16,6 +16,6 @@ public class ClientInit {
 
 	@SubscribeEvent
 	public static void onFMLClientSetup(FMLClientSetupEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(AddonStands.PURPLEHAZE_STAND.getEntityType(), PurpleHaze_Renderer::new);
+		RenderingRegistry.registerEntityRenderingHandler(AddonStands.PURPLE_HAZE.getEntityType(), PurpleHaze_Renderer::new);
 	}
 }

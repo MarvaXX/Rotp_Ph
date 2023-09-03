@@ -9,5 +9,5 @@ import com.github.standobyte.jojo.power.impl.stand.type.EntityStandType;
 public class AddonStands {
 
     public static final EntityStandSupplier<EntityStandType<StandStats>, StandEntityType<PurpleHaze_Entity>> 
-    PURPLEHAZE_STAND = new EntityStandSupplier<>(InitStands.PURPLEHAZE_STAND);
+    PURPLE_HAZE = new EntityStandSupplier<>(InitStands.PURPLE_HAZE);
 }

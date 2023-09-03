@@ -56,7 +56,7 @@ public class InitStands {
     public static final RegistryObject<StandEntityAction> PURPLEHAZE_STAND_BLOCK = ACTIONS.register("purplehaze_stand_block", 
             () -> new StandEntityBlock());
     
-    public static final EntityStandRegistryObject<EntityStandType<StandStats>, StandEntityType<PurpleHaze_Entity>> PURPLEHAZE_STAND = 
+    public static final EntityStandRegistryObject<EntityStandType<StandStats>, StandEntityType<PurpleHaze_Entity>> PURPLE_HAZE = 
             new EntityStandRegistryObject<>("purple_haze", 
                     STANDS, 
                     () -> new EntityStandType<StandStats>(
