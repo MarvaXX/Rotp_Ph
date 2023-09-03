@@ -57,10 +57,10 @@ public class InitStands {
             () -> new StandEntityBlock());
     
     public static final EntityStandRegistryObject<EntityStandType<StandStats>, StandEntityType<PurpleHaze_Entity>> PURPLEHAZE_STAND = 
-            new EntityStandRegistryObject<>("purplehaze_stand", 
+            new EntityStandRegistryObject<>("purple_haze", 
                     STANDS, 
                     () -> new EntityStandType<StandStats>(
-                            0xFFFFFF, ModStandsInit.PART_6_NAME,
+                            0xAA00AA, ModStandsInit.PART_5_NAME,
 
                             new StandAction[] {
                                     PURPLEHAZE_STAND_PUNCH.get(), 
@@ -71,15 +71,14 @@ public class InitStands {
                             StandStats.class, new StandStats.Builder()
                             .tier(6)
                             .power(16.0)
-                            .speed(14.0)
-                            .range(30.0, 60.0)
+                            .speed(12.0)
+                            .range(3, 6.0)
                             .durability(8.0)
-                            .precision(8.0)
+                            .precision(4.0)
                             .build("Purple Haze"), 
 
                             new StandType.StandTypeOptionals()
                             .addSummonShout(InitSounds.USER_PURPLEHAZE_STAND)
-                            .addSummonShout(InitSounds.PURPLEHAZE_STAND_UGH)
                             .addOst(InitSounds.PURPLEHAZE_STAND_OST)), 
 
                     InitEntities.ENTITIES, 
