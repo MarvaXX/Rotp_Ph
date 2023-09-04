@@ -29,4 +29,6 @@ public class RotpPhAddon {
     public static Logger getLogger() {
         return LOGGER;
     }
+
+    public static int PH_CAPSULE;
 }
